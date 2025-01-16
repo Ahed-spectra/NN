@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please Try Again</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            padding-top: 50px;
+            font-size: 24px;
+        }
+        h2 {
+            color: #ff3333;
+        }
+        p {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 30px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        function retry() {
+            // Restarting from the first question
+            window.location.href = 'question1.html';
+        }
+    </script>
+</head>
+<body>
+    <h2>Please go back and try again!</h2>
+    <p>Make sure you answer with what’s in your heart. 😊</p>
+    <button onclick="retry()">Retry</button>
+</body>
+</html>

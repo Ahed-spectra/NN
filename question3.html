@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Questions</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            padding-top: 50px;
+            font-size: 24px;
+        }
+        h2 {
+            color: #333;
+        }
+        button {
+            font-size: 18px;\n            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        function nextQuestion() {
+            const selectedAnswer = document.querySelector('input[name="question"]:checked');
+            if (!selectedAnswer) {
+                alert("Please select an answer before proceeding.");
+                return;
+            }
+            if (selectedAnswer.value === 'no') {
+                window.location.href = 'retry.html';
+            } else {
+                window.location.href = 'question4.html';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Do you have the desire to see the world from a different perspective?</h2>
+    <input type="radio" name="question" value="yes"> Yes<br>
+    <input type="radio" name="question" value="no"> No<br><br>
+    <button onclick="nextQuestion()">Next</button>
+</body>
+</html>
